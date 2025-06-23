@@ -17,7 +17,13 @@ const salt = bcrypt.genSaltSync(10);
 const secret = process.env.JWT_SECRET || 'ascdsjd78sdd'; // Use env variable for secret
 
 // Middleware
-app.use(cors({ credentials: true, origin: 'http://localhost:5173' }));
+app.use(cors({
+  credentials: true,
+  origin: [
+    'http://localhost:5173',
+    'https://miniproject-blog-kappa.vercel.app'
+  ]
+}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads',express.static(__dirname + '/uploads'))
