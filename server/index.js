@@ -23,7 +23,9 @@ app.use(cookieParser());
 app.use('/uploads',express.static(__dirname + '/uploads'))
 
 // MongoDB Connection
-mongoose.connect('mongodb://localhost:27017/blog');
+mongoose.connect('mongodb+srv://mohamedansart:Ansar%40123@cluster0.85c3l.mongodb.net/miniproject?retryWrites=true&w=majority&appName=Cluster0');
+
+// mongodb://localhost:27017/blog
 
 // Routes
 app.post('/register', async (req, res) => {
