@@ -13,7 +13,7 @@ function EditPost() {
 
   useEffect(() => {
     // Fetch the existing post data
-    fetch(`http://localhost:4000/post/${id}`)
+    fetch(`https://miniproject-blog-adkx.onrender.com/post/${id}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch post data');
@@ -59,7 +59,7 @@ function EditPost() {
       data.set('file', files[0]); // Include file only if a new one is selected
     }
 
-    const response = await fetch(`http://localhost:4000/post/${id}`, {
+    const response = await fetch(`https://miniproject-blog-adkx.onrender.com/post/${id}`, {
       method: 'PUT',
       body: data,
       credentials: 'include',

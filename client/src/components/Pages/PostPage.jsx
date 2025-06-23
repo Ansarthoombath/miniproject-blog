@@ -67,7 +67,7 @@ function PostPage() {
       <h1>{postInfo.title}</h1>
       <div className="image">
         <img
-          src={`http://localhost:4000/${postInfo.cover}`}
+          src={`https://miniproject-blog-adkx.onrender.com/${postInfo.cover}`}
           alt={postInfo.title}
         />
       </div>

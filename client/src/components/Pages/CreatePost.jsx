@@ -40,7 +40,7 @@ function CreatePost() {
 
     event.preventDefault();
     console.log({ title, summary, content });
-    const response=await fetch('http://localhost:4000/post', {
+    const response=await fetch('https://miniproject-blog-adkx.onrender.com/post', {
         method: 'POST',
         body: data,
         credentials: 'include',})

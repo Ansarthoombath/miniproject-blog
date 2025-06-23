@@ -4,7 +4,7 @@ import Card from '../Card/Card'
 function IndexPage() {
   const [posts,setPosts] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:4000/post').then(response => {
+    fetch('https://miniproject-blog-adkx.onrender.com/post').then(response => {
       response.json().then(posts => {
         setPosts(posts);
       });
